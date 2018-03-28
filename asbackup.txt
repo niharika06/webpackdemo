@@ -1,0 +1,30 @@
+/List<int> contentModerators;
+            //List<int> contentMasters;
+            //if (placeId != null)
+            //{
+            //    contentModerators = _groupRepository.GetGroupListHavingComponentModeratePermissionForPlace(placeId.Value);
+            //    contentMasters = _groupRepository.GetGroupListHavingContentMasterPermissionForPlace(placeId.Value);
+            //}
+            //else
+            //{
+            //    contentModerators = _groupRepository.GetGroupListHavingComponentModeratePermissionForPage(companyId);
+            //    contentMasters = contentModerators;
+            //}
+
+
+ /// <summary>
+        /// Add or update activity stream in ips with all permissions
+        /// </summary>
+        /// <param name="componentInstance">object of ComponentInstance</param>
+        /// <param name="streamName">name of the activity stream</param>
+        /// <param name="companyId">id of company</param>
+        /// <param name="placeId">id of place</param>
+        /// <param name="pageId">id of Page</param>
+        /// <param name="streamId">id of stream</param>
+        /// <returns>object of CreateActivityStreamResponseAC</returns>
+        private CreateActivityStreamResponseAC AddOrUpdateStreamInIps(ComponentInstance componentInstance, string streamName, int companyId, int? placeId, int? pageId, int streamId = 0)
+        {
+            var groupIdsTuple = GetViewAndInteractGroupIds(componentInstance, companyId);
+            return AddOrUpdateStreamInIps(
+                streamName, companyId, placeId, pageId, streamId);
+        }

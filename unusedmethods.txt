@@ -1,0 +1,81 @@
+
+        /// <summary>
+        /// Changes read status filter to be applied in stream.
+        /// </summary>
+        /// <param name="activityStreamInstanceData"> stream instance</param>
+        /// <param name="readStatus">all contents or only unread contents</param>
+        /// <param name="mediumType">page or place</param>
+        void ChangeReadStatus(CreateActivityStreamRequestAC activityStreamInstanceData, ReadStatus readStatus, ServingMediumType mediumType);
+
+        /// <summary>
+        /// Changes source of content for the stream.
+        /// </summary>
+        /// <param name="activityStreamInstanceData">instance of the stream </param>
+        /// <param name="contentSource">source of content</param>
+        /// <param name="mediumType">page or place</param>
+        void ChangeContentSource(CreateActivityStreamRequestAC activityStreamInstanceData, ContentSource contentSource, ServingMediumType mediumType);
+
+        /// <summary>
+        /// Changes to display activities according to sorting selected by user.
+        /// </summary>
+        /// <param name="activityStreamInstanceData">instance of the stream </param>
+        /// <param name="sortType">sort type selected</param>
+        /// <param name="mediumType">page or place</param>
+        void ChangeSortType(CreateActivityStreamRequestAC activityStreamInstanceData, Sort sortType, ServingMediumType mediumType);
+
+        /// <summary>
+        /// Changes Follow type to be applied.
+        /// </summary>
+        /// <param name="activityStreamInstanceData">instance of the stream </param>
+        /// <param name="followType">follow type</param>
+        /// <param name="mediumType">page or place</param>
+        void ChangeFollowType(CreateActivityStreamRequestAC activityStreamInstanceData, FollowType followType, ServingMediumType mediumType);
+
+        /// <summary>
+        /// Changes Following contents to be filtered.
+        /// </summary>
+        /// <param name="activityStreamInstanceData">instance of the stream </param>
+        /// <param name="followingType">following type</param>
+        /// <param name="mediumType">page or place</param>
+        void ChangeFollowingType(CreateActivityStreamRequestAC activityStreamInstanceData, Following followingType, ServingMediumType mediumType);
+
+        /// <summary>
+        /// Changes type of content to be applied.
+        /// </summary>
+        /// <param name="activityStreamInstanceData">instance of stream </param>
+        /// <param name="contentsToBeShown"> list of contents to be shown</param>
+        /// <param name="mediumType">page or place</param>
+        void ChangeContentType(CreateActivityStreamRequestAC activityStreamInstanceData, List<string> contentsToBeShown, ServingMediumType mediumType);
+
+        /// <summary>
+        /// Changes time period filter.
+        /// </summary>
+        /// <param name="activityStreamInstanceData">instance of the stream </param>
+        /// <param name="timePeriod">time period filter selected by user</param>
+        /// <param name="mediumType">page or place</param>
+        void ChangeTimePeriod(CreateActivityStreamRequestAC activityStreamInstanceData, TimePeriod timePeriod, ServingMediumType mediumType);
+
+        /// <summary>
+        /// Changes tag which is to be applied for the stream.
+        /// </summary>
+        /// <param name="activityStreamInstanceData">instance of the stream</param>
+        /// <param name="tag">tag to be applied in filter.</param>
+        /// <param name="mediumType">page or place</param>
+        void ChangeTag(CreateActivityStreamRequestAC activityStreamInstanceData, string tag, ServingMediumType mediumType);
+
+        /// <summary>
+        /// Changes to display activities in stream according to the selection by user, whether to include comments or not
+        /// </summary>
+        /// <param name="activityStreamInstanceData">object of the stream</param>
+        /// <param name="toIncludeComments">boolean which denotes whether to include comments or not</param>
+        /// <param name="mediumType">page or place</param>
+        void ChangeToIncludeComments(CreateActivityStreamRequestAC activityStreamInstanceData, bool toIncludeComments, ServingMediumType mediumType);
+
+
+console.log(this.IpsDetailUrl);
+        //if (this.CreateActivityStreamRequestAC.FollowType[0] === FollowType.containers)
+        //    this.isContainersFollowed = true;
+        //if (this.CreateActivityStreamRequestAC.FollowType[1] === FollowType.items)
+        //    this.isItemsFollowed = true;
+        //if (this.CreateActivityStreamRequestAC.FollowType[2] === FollowType.members)
+        //    this.isMembersFollowed = true;
